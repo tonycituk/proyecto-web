@@ -19,18 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 const getAllMovimientos = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
 	try {
         const [ results ] = await db.query(
-            `SELECT 
-                productos.nombre AS producto,
-                productos.partida,
-                productos.unidad,
-                movimientos.createdAt AS fecha,
-                movimientos.cantidad,
-                movimientos.tipo,
-                movimientos.precio,
-                movimientos.observacion	
-            FROM movimientos
-                JOIN productos
-                ON movimientos.producto = productos.clave`
+            `SELECT * FROM movimientosConProducto`
             );
     
             return res.json(results);
