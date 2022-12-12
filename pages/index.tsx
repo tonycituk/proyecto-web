@@ -7,6 +7,7 @@ import { GetServerSideProps } from "next";
 import { db } from "../config";
 import { validateJWT } from "../utils";
 import { Header, FloatingButton } from "../components";
+import logoPic from '../public/img/logo.png'
 
 export default function Menu () {
 
@@ -19,7 +20,7 @@ export default function Menu () {
 			<div className="md:w-80 mx-auto">
 				<header className="container text-center mx-auto md:mt-10">
 					<Image
-						src="/img/logo.png"
+						src={logoPic}
 						width={125}
 						height={125}
 						alt="Logo"
@@ -35,6 +36,8 @@ export default function Menu () {
 					<Link href="/existencias">Consultar existencias</Link>
 					<Link href="/tarjetas">Tarjetas de almacen</Link>
 					<Link href="/movimientos">Resumen de movimientos</Link>
+					<Link href="/logo">Cambiar Logo</Link>
+
 				</div>
 			</div>
 
