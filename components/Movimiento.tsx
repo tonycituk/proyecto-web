@@ -10,8 +10,8 @@ export function Movimiento({ movimiento }: Props) {
     const { cantidad, fecha, observacion, partida, precio, producto, tipo, unidad } = movimiento;
 
     return (
-        <div className="h-auto mx-auto my-8 rounded-md bg-[white] drop-shadow-xl w-11/12 md:w-[760px]">
-            <ul className="pl-[30px] pt-[1rem]">
+        <div className="h-auto mx-auto my-8 rounded-md bg-[white] drop-shadow-xl w-11/12 md:w-[760px] mqprint">
+            <ul className="pl-[30px] pt-[1rem] print_pl">
                 <li className="flex flex-wrap items-center">
                     <p className="uppercase font-bold pr-[7px] py-[13px] text-lg">Nombre del articulo:</p>
                     <p className="text-lg">{producto}</p>
@@ -41,7 +41,7 @@ export function Movimiento({ movimiento }: Props) {
                     <p className="text-lg">{observacion}</p>
                 </li>
             </ul>
-            <div className="flex flex-wrap mt-[1.5rem] pb-5 mx-[2rem] justify-between items-center">
+            <div className="flex flex-wrap mt-[1.5rem] pb-5 mx-[2rem] justify-between items-center printEntrada">
                 <p className="text-rojo font-bold uppercase text-lg">{tipo}</p>
             </div>
         </div>

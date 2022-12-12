@@ -6,7 +6,7 @@ interface Props {
 
 export function Buscador({handleSearch}: Props) {
 	return (
-		<div className="flex justify-center mx-3">
+		<div className="flex justify-center mx-3 buscadorPrint">
 			<input
 				type="text"
 				onChange={handleSearch}
